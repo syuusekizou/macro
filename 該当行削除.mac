@@ -1,0 +1,35 @@
+disabledraw;
+
+//ŒŸõğŒ‚Ì•Û
+$s = searchbuffer;
+#f = searchoption;
+
+$def = "";
+if(selecting){
+    $def = gettext2(seltopcolumn, seltoplineno, selendcolumn, selendlineno);
+}
+
+$str = input("ŒŸõ•¶š—ñ‚Ì“ü—Í", $def);
+
+if(strlen($str) == 0){
+    endmacro;
+}
+
+gofiletop;
+
+while(true){
+    searchdown $str, regular;
+    #r = result;
+
+    if(#r == false){
+        break;
+    }
+
+    deleteline;
+    golinetop;
+}
+
+//•Û‚µ‚Ä‚¢‚½ŒŸõğŒ‚ğİ’è
+setsearch $s, #f;
+
+enabledraw;

@@ -1,0 +1,17 @@
+  #start_x = x;
+
+	setcompatiblemode 0x0F;
+	insert "if ()";
+	insertreturn;
+	insert "{";
+	insertreturn;
+	insert "}";
+  left;
+
+  #tmp_x = x;
+  while(#tmp_x > #start_x){
+    backspace;
+    #tmp_x = #tmp_x - 1;
+  }
+	up 2;
+	right 4;

@@ -1,0 +1,22 @@
+disabledraw;
+
+//検索条件の保持
+$s = searchbuffer;
+#f = searchoption;
+
+if(selecting == 0){
+  enabledraw;
+  endmacro;
+}
+
+//カーソル位置が検索前と後で変わらないようにするために、カーソルを移動
+left 2;
+
+//選択文字列を取得して検索
+$str = gettext2(seltopcolumn, seltoplineno, selendcolumn, selendlineno);
+searchdown $str, casesense, loop, hilight;
+
+//保持していた検索条件を設定
+setsearch $s, #f;
+
+enabledraw;

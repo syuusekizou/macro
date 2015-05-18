@@ -1,0 +1,4 @@
+	setcompatiblemode 0x0F;
+	insertline;
+	insert "/* TODO  */";
+	left 3;

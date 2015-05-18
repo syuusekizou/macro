@@ -1,0 +1,21 @@
+setcompatiblemode 0x0F;
+disabledraw;
+
+//ŒŸõğŒ‚Ì•Û
+$s = searchbuffer;
+#f = searchoption;
+
+#tmpColumn = column;
+#tmpLineno = lineno;
+begingroupundo;
+replaceall "( |@|\t)+$" , "" , regular, nocasesense, inselect;
+if( result )  message str(result) + "ŒÂ’uŠ·‚µ‚Ü‚µ‚½";
+
+endgroupundo;
+
+//•Û‚µ‚Ä‚¢‚½ŒŸõğŒ‚ğİ’è
+setsearch $s, #f;
+
+moveto2 #tmpColumn, #tmpLineno;
+
+enabledraw;

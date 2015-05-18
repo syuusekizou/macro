@@ -1,0 +1,25 @@
+disabledraw;
+
+if (selecting == 0)
+{
+  deleteline;
+  endmacro;
+}
+
+##top = seltoplineno;
+##end = selendlineno;
+
+//message "##top" + str(##top) + ", ##end" + str(##end);
+
+begingroupundo;
+while (##end >= ##top)
+{
+  movetolineno 1, ##end;
+  deleteline;
+
+  ##end = ##end - 1;
+}
+endgroupundo;
+
+enabledraw;
+

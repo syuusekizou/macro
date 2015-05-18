@@ -1,0 +1,11 @@
+##tmplineno = lineno;
+gokakko;
+
+##line = lineno - ##tmplineno;
+if (##line < 0)
+{
+  ##line = ##line * -1;
+}
+gokakko;
+
+message "Š‡ŒÊŠÔ‚Ìs”F\n" + str(##line) + "s";
