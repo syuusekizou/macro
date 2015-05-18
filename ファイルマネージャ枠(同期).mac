@@ -1,0 +1,3 @@
+loaddll "HmExplorerPane.dll";
+#h=dllfunc("GetWindowHandle",hidemaruhandle(0));
+#ret=sendmessage(#h,0x111/*WM_COMMAND*/,252,0); //252=“¯Šú

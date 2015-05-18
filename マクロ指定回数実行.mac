@@ -1,0 +1,11 @@
+setcompatiblemode 0x0F;
+
+//指定回数実行したいマクロ
+$macroPath = "実行したいマクロのパスをここに記入";
+
+#count=val(input("マクロ実行回数","0"));
+while(#count){
+    execmacro $macroPath;
+    #count = #count-1;
+}
+endmacro;

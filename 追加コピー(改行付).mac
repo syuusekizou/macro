@@ -1,0 +1,7 @@
+beginclipboardread;
+
+//クリップボードに追加
+$str = getclipboard;
+$str = $str + "\x0D\x0A" + gettext(seltopx,seltopy,selendx,selendy);
+
+setclipboard $str;
